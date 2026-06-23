@@ -1,561 +1,158 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apa Itu Solar Panel? Cara Kerja, Jenis & Keuntungannya 2026</title>
+<meta name="description" content="Penjelasan lengkap apa itu solar panel, cara kerja panel surya, jenis monocrystalline, polycrystalline, keuntungan & kekurangan pakai PLTS atap rumah 2026.">
+<meta name="keywords" content="apa itu solar panel, cara kerja panel surya, jenis panel surya, solar panel murah, PLTS atap">
+<link rel="canonical" href="https://solarpanelmurah.id/apa-itu-solar-panel">
 
-    <title>SolarPanelMurah.id | Informasi Panel Surya, Harga & Panduan Indonesia</title>
+<!-- Open Graph buat share WA/FB -->
+<meta property="og:title" content="Apa Itu Solar Panel? Cara Kerja, Jenis & Keuntungannya 2026">
+<meta property="og:description" content="Panduan lengkap solar panel untuk pemula. Dari cara kerja, jenis mono vs poly, sampai keuntungan pasang PLTS atap di Indonesia.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://solarpanelmurah.id/apa-itu-solar-panel">
+<meta property="og:image" content="https://solarpanelmurah.id/wp-content/uploads/solar-panel-monocrystalline-atap-rumah.jpg">
 
-    <meta name="description" content="Portal informasi panel surya di Indonesia. Pelajari harga, cara kerja, estimasi biaya, panduan PLTS rumah, dan tips memilih komponen energi surya.">
-
-    <meta name="robots" content="index, follow">
-
-    <link rel="canonical" href="https://solarpanelmurah.id/">
-
-    <link rel="icon" href="favicon.ico">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="SolarPanelMurah.id">
-    <meta property="og:description" content="Portal informasi panel surya di Indonesia.">
-    <meta property="og:url" content="https://solarpanelmurah.id/">
-    <meta property="og:image" content="https://solarpanelmurah.id/images/cover.jpg">
-
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
-
-        html{
-            scroll-behavior:smooth;
-        }
-
-        body{
-            font-family:Arial,Helvetica,sans-serif;
-            background:#f4f7f9;
-            color:#222;
-            line-height:1.7;
-            padding-top:70px;
-        }
-
-        nav{
-            position:fixed;
-            top:0;
-            left:0;
-            width:100%;
-            background:#0f172a;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:16px 20px;
-            z-index:9999;
-        }
-
-        .logo{
-            color:#fff;
-            text-decoration:none;
-            font-size:22px;
-            font-weight:bold;
-        }
-
-        .menu{
-            display:flex;
-            gap:24px;
-        }
-
-        .menu a{
-            color:white;
-            text-decoration:none;
-        }
-
-        .menu a:hover{
-            color:#f59e0b;
-        }
-
-        .menu-toggle{
-            display:none;
-            flex-direction:column;
-            gap:5px;
-            cursor:pointer;
-        }
-
-        .menu-toggle span{
-            width:26px;
-            height:3px;
-            background:white;
-        }
-
-        header{
-            background:
-                linear-gradient(rgba(15,118,110,.88),rgba(15,118,110,.88)),
-                url("images/hero-panel-surya.webp") center/cover no-repeat;
-            color:white;
-            text-align:center;
-            padding:90px 20px;
-        }
-
-        header h1{
-            font-size:44px;
-            margin-bottom:18px;
-        }
-
-        header p{
-            max-width:760px;
-            margin:auto;
-            margin-bottom:28px;
-            font-size:18px;
-        }
-
-        .btn{
-            display:inline-block;
-            background:#f59e0b;
-            color:white;
-            text-decoration:none;
-            padding:14px 28px;
-            border-radius:8px;
-            font-weight:bold;
-            border:none;
-            cursor:pointer;
-        }
-
-        .btn:hover{
-            background:#d97706;
-        }
-
-        main{
-            max-width:1100px;
-            margin:auto;
-            padding:50px 20px;
-        }
-
-        section{
-            margin-bottom:50px;
-        }
-
-        h2{
-            margin-bottom:18px;
-            color:#0f172a;
-        }
-
-        .cards{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:20px;
-        }
-
-        .card{
-            background:white;
-            padding:24px;
-            border-radius:12px;
-            box-shadow:0 2px 8px rgba(0,0,0,.08);
-        }
-
-        .calc-box{
-            background:white;
-            padding:24px;
-            border-radius:12px;
-            box-shadow:0 2px 8px rgba(0,0,0,.08);
-        }
-
-        input{
-            width:100%;
-            padding:12px;
-            margin-top:8px;
-            margin-bottom:16px;
-            border-radius:6px;
-            border:1px solid #ccc;
-        }
-
-        .result{
-            display:none;
-            margin-top:20px;
-            padding:16px;
-            background:#ecfdf5;
-            border-left:4px solid #10b981;
-            border-radius:6px;
-        }
-
-        ul{
-            padding-left:20px;
-        }
-
-        li{
-            margin-bottom:10px;
-        }
-
-        li a{
-            text-decoration:none;
-            color:#0f766e;
-        }
-
-        /* Gaya Khusus untuk Poster Gambar */
-        .poster-container {
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .poster-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        footer{
-            background:#0f172a;
-            color:white;
-            text-align:center;
-            padding:30px 20px;
-        }
-
-        .wa-btn{
-            position:fixed;
-            right:20px;
-            bottom:20px;
-            background:#25D366;
-            color:white;
-            text-decoration:none;
-            padding:14px 18px;
-            border-radius:50px;
-            font-weight:bold;
-            z-index: 999;
-        }
-
-        @media(max-width:768px){
-
-            .menu{
-                display:none;
-                position:absolute;
-                top:60px;
-                right:0;
-                width:220px;
-                flex-direction:column;
-                background:#0f172a;
-                padding:20px;
-            }
-
-            .menu.active{
-                display:flex;
-            }
-
-            .menu-toggle{
-                display:flex;
-            }
-
-            header h1{
-                font-size:32px;
-            }
-
-            header p{
-                font-size:16px;
-            }
-
-        }
-    </style>
-
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Organization",
-      "name":"SolarPanelMurah.id",
-      "url":"https://solarpanelmurah.id",
-      "logo":"https://solarpanelmurah.id/images/logo.png"
+<!-- Schema.org JSON-LD biar Google paham -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Apa Itu Solar Panel? Cara Kerja, Jenis & Keuntungannya 2026",
+  "description": "Penjelasan lengkap apa itu solar panel, cara kerja panel surya, jenis monocrystalline, polycrystalline, keuntungan & kekurangan pakai PLTS atap rumah 2026.",
+  "author": {
+    "@type": "Organization",
+    "name": "SolarPanelMurah.id"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SolarPanelMurah.id",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://solarpanelmurah.id/logo.png"
     }
-    </script>
+  },
+  "datePublished": "2026-04-23",
+  "dateModified": "2026-04-23"
+}
+</script>
 
+<style>
+body{font-family:Arial,sans-serif;line-height:1.7;color:#333;max-width:800px;margin:0 auto;padding:20px}
+h1,h2,h3{color:#1a73e8;margin-top:30px}
+img{max-width:100%;height:auto;border-radius:8px}
+.article-meta{color:#666;font-size:14px;margin-bottom:20px}
+</style>
 </head>
 
 <body>
-
-<nav>
-
-    <a class="logo" href="/">
-        SolarPanelMurah.id
-    </a>
-
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <div class="menu" id="menu">
-
-        <a href="/">Beranda</a>
-
-        <a href="#artikel">
-            Artikel
-        </a>
-
-        <a href="#kalkulator">
-            Kalkulator
-        </a>
-
-        <a href="#tentang">
-            About
-        </a>
-
-        <a href="https://wa.me/628986684639" target="_blank" rel="noopener noreferrer">
-            Kontak
-        </a>
-
-    </div>
-
-</nav>
-
+<article>
 <header>
-
-    <h1>
-        SolarPanelMurah.id
-    </h1>
-
-    <p>
-        Portal informasi panel surya di Indonesia yang membahas harga,
-        cara kerja, perencanaan PLTS rumah, serta panduan energi surya
-        untuk masyarakat dan pelaku usaha.
-    </p>
-
-    <a class="btn" href="#kalkulator">
-        Hitung Estimasi
-    </a>
-
+<h1>Apa Itu Solar Panel? Cara Kerja, Jenis & Keuntungannya 2026</h1>
+<div class="article-meta">Dipublikasikan: 23 April 2026 | Oleh: SolarPanelMurah.id</div>
+<img src="https://solarpanelmurah.id/wp-content/uploads/solar-panel-monocrystalline-atap-rumah.jpg" alt="Solar panel monocrystalline dipasang di atap rumah Indonesia">
 </header>
 
-<main>
+<p><strong>Solar panel</strong> atau <strong>panel surya</strong> adalah perangkat yang mengubah energi matahari jadi energi listrik. Bahannya paling banyak pakai silikon. Prinsipnya simpel: pas kena sinar matahari, elektron di dalam panel jadi bergerak. Gerakan elektron inilah yang kita sebut arus listrik DC.</p>
 
-<section>
+<p>Nama "solar panel" berasal dari bahasa Inggris "solar" = matahari. Di Indonesia orang juga sering nyebutnya PLTS Atap, singkatan dari Pembangkit Listrik Tenaga Surya skala atap rumah.</p>
 
-<h2>
-Mengapa Menggunakan Panel Surya?
-</h2>
+<p>Jadi kalau ditanya "apa itu solar panel?", jawab singkatnya: alat penangkap energi matahari biar rumah kamu bisa nyala lampu, nyalain TV, kulkas, tanpa full bergantung ke PLN.</p>
 
-<p>
-Panel surya mengubah energi matahari menjadi listrik yang dapat dimanfaatkan
-untuk berbagai kebutuhan. Dengan perencanaan yang tepat, teknologi ini dapat
-membantu mengurangi konsumsi listrik dari jaringan konvensional sekaligus
-mendukung penggunaan energi yang lebih berkelanjutan.
-</p>
+<h2>Cara Kerja Solar Panel, Gimana Listriknya Bisa Keluar?</h2>
 
-<!-- BAGIAN PENEMPATAN POSTER.JPG -->
-<div class="poster-container">
-    <img src="poster.jpg" alt="Poster Solar Panel Murah" class="poster-img">
-</div>
+<p>Banyak yang bingung, "masa matahari disorot ke papan bisa jadi listrik?". Ini alurnya:</p>
 
-</section>
+<ol>
+<li><strong>Penyerapan Cahaya</strong>: Panel surya terdiri dari banyak "sel surya" atau solar cell. Sel ini tugasnya nyerap foton dari sinar matahari.</li>
+<li><strong>Efek Fotovoltaik</strong>: Foton yang nyerang sel silikon bikin elektron lepas dari atomnya. Elektron yang lepas ini bergerak bebas. Fenomena ini namanya Efek Fotovoltaik, ditemukan tahun 1839.</li>
+<li><strong>Arus Listrik DC</strong>: Elektron yang bergerak tadi disalurkan lewat kabel jadi arus listrik DC = Direct Current. Listrik DC ini sama kayak listrik dari baterai.</li>
+<li><strong>Ubah ke AC pakai Inverter</strong>: Peralatan rumah pakai listrik AC = Alternating Current. Nah, listrik DC dari panel surya diubah jadi AC pakai alat namanya inverter. Baru deh bisa dipakai nyalain kipas angin, AC, pompa air.</li>
+<li><strong>Net Metering ke PLN</strong>: Kalau pakai sistem on-grid, listrik berlebih dari panel surya bisa dijual balik ke PLN. Meteran kamu muter balik. Itu namanya net metering.</li>
+</ol>
 
-<section class="cards">
+<p>Intinya: Matahari → Panel → DC → Inverter → AC → Colokan rumah kamu.</p>
 
-<div class="card">
-<h3>💡 Edukasi Lengkap</h3>
-<p>Belajar tentang panel surya, inverter, baterai, dan sistem PLTS.</p>
-</div>
+<h2>Jenis-Jenis Solar Panel yang Paling Laku di Indonesia</h2>
 
-<div class="card">
-<h3>💰 Estimasi Kebutuhan</h3>
-<p>Hitung kebutuhan daya dan perkiraan kapasitas panel surya.</p>
-</div>
+<p>Nggak semua panel surya itu sama. Buat jual di solarpanelmurah.id, kamu harus paham 3 jenis utama ini:</p>
 
-<div class="card">
-<h3>🌱 Energi Berkelanjutan</h3>
-<p>Pahami manfaat energi matahari untuk rumah dan bisnis.</p>
-</div>
+<h3>1. Solar Panel Monocrystalline / Monokristalin</h3>
+<p><strong>Ciri</strong>: Warnanya hitam pekat, sudutnya runcing.<br>
+<strong>Kelebihan</strong>: Efisiensinya paling tinggi, 18-22%. Hemat tempat. Umurnya 25-30 tahun.<br>
+<strong>Kekurangan</strong>: Harga paling mahal.<br>
+<strong>Cocok buat</strong>: Atap rumah kecil tapi mau daya besar. Ini yang paling dicari pembeli.</p>
 
-</section>
+<h3>2. Solar Panel Polycrystalline / Polikristalin</h3>
+<p><strong>Ciri</strong>: Warnanya biru, ada motif kotak-kotak.<br>
+<strong>Kelebihan</strong>: Harga lebih murah dari mono.<br>
+<strong>Kekurangan</strong>: Efisiensi lebih rendah, 15-17%. Butuh area lebih luas.<br>
+<strong>Cocok buat</strong>: Lahan luas, budget terbatas.</p>
 
-<section id="kalkulator">
+<h3>3. Solar Panel Thin Film / Lapisan Tipis</h3>
+<p><strong>Ciri</strong>: Fleksibel, bisa ditekuk. Warnanya hitam doff.<br>
+<strong>Kelebihan</strong>: Ringan, bisa dipasang di permukaan melengkung.<br>
+<strong>Kekurangan</strong>: Efisiensi paling rendah, 10-13%. Umur lebih pendek.<br>
+<strong>Cocok buat</strong>: Tas solar, tenda, bukan untuk atap rumah utama.</p>
 
-<h2>Kalkulator Estimasi Sederhana</h2>
+<p>Buat pasar Indonesia, 90% yang laku itu Monocrystalline. Soalnya atap rumah orang Indonesia sempit-sempit.</p>
 
-<div class="calc-box">
+<h2>Komponen Sistem Solar Panel Selain Panelnya</h2>
 
-<label>Daya listrik rumah (VA/Watt)</label>
-<input id="daya" type="number">
+<p>Solar panel nggak bisa kerja sendirian. 1 set PLTS Atap minimal ada 4 komponen:</p>
 
-<label>Rata-rata jam penggunaan per hari</label>
-<input id="jam" type="number">
+<ol>
+<li><strong>Solar Panel</strong>: Penangkap energinya. Biasa diukur pakai WP. Misal 550WP, 700WP.</li>
+<li><strong>Inverter</strong>: Otaknya. Ngubah DC jadi AC + ngatur arus. Ada on-grid, off-grid, hybrid.</li>
+<li><strong>Baterai/Aki</strong>: Buat nyimpen listrik. Wajib ada kalau sistem off-grid. Kalau on-grid bisa nggak pakai baterai.</li>
+<li><strong>Rangka & Kabel MC4</strong>: Rangka aluminium buat nempelin panel ke atap. Kabel MC4 khusus tahan panas + hujan.</li>
+</ol>
 
-<button class="btn" onclick="hitung()">
-Hitung
-</button>
+<p>Jadi kalau ada yang nawarin "panel surya murah 300rb", tanyain dulu: itu cuma panelnya aja atau 1 set lengkap?</p>
 
-<div class="result" id="hasil"></div>
+<h2>Keuntungan Pakai Solar Panel di Rumah Indonesia 2026</h2>
 
-</div>
+<p>Kenapa orang mulai rame pasang panel surya? Ini 4 alasannya:</p>
 
-<p style="margin-top:10px;font-size:13px;color:#666;">
-Hasil di atas merupakan simulasi sederhana dan bukan penawaran resmi.
-</p>
+<p><strong>1. Tagihan Listrik Turun Drastis</strong><br>
+Panel 550WP x 6 keping bisa hasilin 2-3 kWh per hari. Kalau tarif PLN 1.444/kWh, berarti hemat 90rb/bulan. Setahun 1 jutaan. Umur panel 25 tahun = hemat 25 juta.</p>
 
-</section>
+<p><strong>2. Bebas Mati Lampu</strong><br>
+Pakai sistem hybrid + baterai, pas PLN mati rumah kamu tetap nyala. Ini paling dicari di Bandung & daerah yang sering padam.</p>
 
-<section id="artikel">
+<p><strong>3. Ramah Lingkungan</strong><br>
+1 kWh listrik dari panel surya = ngurangin emisi CO2 sekitar 0,8kg. Pasang 10 panel = kayak nanem 20 pohon per tahun.</p>
 
-<h2>Artikel Pilihan</h2>
+<p><strong>4. Harga Jual Rumah Naik</strong><br>
+Rumah yang udah ada PLTS Atap harganya lebih tinggi. Pembeli sekarang udah melek energi hijau.</p>
 
+<h2>Kekurangan Solar Panel yang Harus Kamu Tahu</h2>
+
+<p>Biar adil, ini kekurangannya juga:</p>
+
+<ol>
+<li><strong>Modal Awal Besar</strong>: 1 set 1300VA butuh dana 15-25 juta. Balik modal 5-7 tahun.</li>
+<li><strong>Tergantung Cuaca</strong>: Pas mendung/hujan deras, hasil listrik turun 70%. Makanya masih butuh PLN.</li>
+<li><strong>Perawatan Atap</strong>: Atap harus rutin dibersihin dari debu + kotoran burung biar efisiensi nggak turun.</li>
+</ol>
+
+<p>Tapi dengan harga panel yang makin murah tiap tahun, kekurangannya makin kecil.</p>
+
+<h2>Kesimpulan: Solar Panel Cocok Buat Siapa?</h2>
+
+<p>Singkatnya, <strong>solar panel adalah investasi jangka panjang</strong>. Cocok banget buat kamu yang:</p>
 <ul>
-    <li><a href="pengertian-solar-panel.html">Pengertian Solar Panel</a></li>
+<li>Tagihan listrik di atas 500rb/bulan</li>
+<li>Rumah area Bandung yang sering mati lampu</li>
+<li>Mau rumahnya "future proof" & ramah lingkungan</li>
 </ul>
 
-</section>
+<p>Kalau cuma pakai listrik 200rb/bulan, mungkin belum balik modal. Tapi kalau udah 800rb/bulan, panel surya bisa jadi solusi paling masuk akal tahun 2026.</p>
 
-</main>
+<p>Mau tahu berapa WP panel surya yang cocok buat rumah kamu? Hitung dulu kebutuhan listriknya, baru pilih jenis panel monocrystalline yang paling efisien.</p>
 
-<footer>
-    <p>&copy; 2026 SolarPanelMurah.id. All Rights Reserved.</p>
-</footer>
-
-<a href="https://wa.me/628986684639" class="wa-btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-
-<script>
-    // Fungsi untuk memunculkan menu di HP (Responsive Menu)
-    function toggleMenu() {
-        var menu = document.getElementById("menu");
-        menu.classList.toggle("active");
-    }
-
-    // Fungsi kalkulator simulasi sederhana
-    function hitung() {
-        var daya = parseFloat(document.getElementById("daya").value);
-        var jam = parseFloat(document.getElementById("jam").value);
-        var hasilDiv = document.getElementById("hasil");
-
-        if (isNaN(daya) || isNaN(jam) || daya <= 0 || jam <= 0) {
-            alert("Silakan masukkan angka valid!");
-            return;
-        }
-
-        // Contoh rumus simulasi kasaran
-        var totalKwh = (daya * jam) / 1000;
-        var kebutuhanPanel = Math.ceil((totalKwh * 1000) / (4 * 400)); // asumsi 4 jam efektif matahari & panel 400Wp
-
-        hasilDiv.style.display = "block";
-        hasilDiv.innerHTML = "<strong>Hasil Estimasi:</strong><br>" +
-                             "Total konsumsi harian: " + totalKwh.toFixed(2) + " kWh<br>" +
-</script>
-</head>
-
-<body>
-
-<nav>
-    <a href="/" class="logo">SolarPanelMurah.id</a>
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <div class="menu" id="menu">
-        <a href="/">Beranda</a>
-        <a href="#artikel">Artikel</a>
-        <a href="#kalkulator">Kalkulator</a>
-        <a href="#tentang">Tentang</a>
-        <a href="https://wa.me/628986684639?text=Halo%20admin%20SolarPanelMurah.id,%20saya%20mau%20tanya%20tentang%20panel%20surya" target="_blank">Kontak</a>
-    </div>
-</nav>
-
-<header>
-    <h1>SolarPanelMurah.id</h1>
-    <p>Portal informasi panel surya di Indonesia. Bahas harga, cara kerja, estimasi biaya, dan panduan PLTS rumah & bisnis.</p>
-    <a class="btn" href="#kalkulator">Hitung Estimasi Biaya</a>
-</header>
-
-<div class="container">
-
-    <section>
-        <h2>Mengapa Menggunakan Panel Surya?</h2>
-        <p>Panel surya memanfaatkan energi matahari untuk menghasilkan listrik. Cocok untuk mengurangi tagihan PLN dan jadi solusi energi bersih yang makin berkembang di Indonesia.</p>
-    </section>
-
-    <section class="cards">
-        <div class="card">
-            <h3>💡 Edukasi Lengkap</h3>
-            <p>Pelajari dasar panel surya, inverter, baterai, hingga sistem PLTS dengan bahasa simpel.</p>
-        </div>
-        <div class="card">
-            <h3>💰 Estimasi Biaya</h3>
-            <p>Hitung kebutuhan daya & perkiraan biaya pemasangan sesuai pemakaian listrik rumahmu.</p>
-        </div>
-        <div class="card">
-            <h3>🌱 Energi Berkelanjutan</h3>
-            <p>Kurangi jejak karbon dan ikut dukung transisi ke energi terbarukan di Indonesia.</p>
-        </div>
-    </section>
-
-    <section id="kalkulator">
-        <h2>Kalkulator Estimasi Biaya PLTS Rumah</h2>
-        <div class="calc-box">
-            <label>Berapa watt daya listrik rumah kamu?</label>
-            <input type="number" id="daya" placeholder="Contoh: 1300">
-
-            <label>Jam pemakaian per hari</label>
-            <input type="number" id="jam" placeholder="Contoh: 8">
-
-            <button class="btn" onclick="hitung()">Hitung Sekarang</button>
-
-            <div class="calc-result" id="hasil"></div>
-        </div>
-        <p style="font-size: 13px; color: #666; margin-top: 10px;">*Estimasi kasar. Untuk harga pasti + survei lokasi gratis, chat WA kami.</p>
-    </section>
-
-    <section id="artikel">
-        <h2>Artikel yang Akan Hadir</h2>
-        <ul>
-            <li><a href="harga-panel-surya.html">Harga Panel Surya Terbaru di Indonesia</a></li>
-            <li><a href="cara-menghitung-kebutuhan-panel-surya.html">Cara Menghitung Kebutuhan Panel Surya Rumah</a></li>
-            <li><a href="plts-on-grid-vs-off-grid.html">PLTS On Grid vs Off Grid</a></li>
-            <li><a href="tips-memilih-inverter.html">Tips Memilih Inverter</a></li>
-            <li><a href="panduan-memilih-baterai.html">Panduan Memilih Baterai untuk Panel Surya</a></li>
-            <li><a href="perawatan-panel-surya.html">Perawatan Panel Surya agar Tetap Optimal</a></li>
-        </ul>
-    </section>
-
-    <section id="tentang">
-        <h2>Tentang SolarPanelMurah.id</h2>
-        <p>Website ini jadi sumber informasi panel surya di Indonesia. Tujuannya bantu kamu paham konsep dasar, perencanaan, dan aspek teknis sistem tenaga surya sebelum pasang.</p>
-    </section>
-
-</div>
-
-<footer>
-    © 2026 SolarPanelMurah.id - Informasi Panel Surya Indonesia<br>
-    Kontak: <a href="https://wa.me/628986684639" target="_blank" style="color:#25D366">0898-6684-639</a>
-</footer>
-
-<a class="wa-btn" href="https://wa.me/628986684639?text=Halo%20admin%20SolarPanelMurah.id,%20saya%20mau%20tanya%20tentang%20panel%20surya" target="_blank">Konsultasi WA</a>
-
-<script>
-function toggleMenu(){
-    document.getElementById('menu').classList.toggle('active');
-}
-
-function hitung(){
-    let daya = document.getElementById('daya').value;
-    let jam = document.getElementById('jam').value;
-    let hasil = document.getElementById('hasil');
-
-    if(daya == '' || jam == ''){
-        alert('Isi daya dan jam pemakaian dulu ya');
-        return;
-    }
-
-    let kwhPerHari = (daya * jam) / 1000;
-    let kwhPerBulan = kwhPerHari * 30;
-    let wpDibutuhkan = Math.ceil(kwhPerBulan / 4);
-    let panel550wp = Math.ceil(wpDibutuhkan / 550);
-    let estimasiBiaya = wpDibutuhkan * 15000;
-
-    hasil.style.display = 'block';
-    hasil.innerHTML = `
-        <strong>Hasil Estimasi:</strong><br>
-        Kebutuhan: ${kwhPerBulan.toFixed(0)} kWh/bulan<br>
-        Panel dibutuhkan: ~${wpDibutuhkan} WP ≈ ${panel550wp} lembar 550WP<br>
-        Estimasi biaya: Rp ${estimasiBiaya.toLocaleString('id-ID')}<br>
-        <small>Belum termasuk inverter, baterai, instalasi</small><br><br>
-        <a href="https://wa.me/628986684639?text=Halo%20min,%20hasil%20estimasi%20saya%20${wpDibutuhkan}%20WP" target="_blank" class="btn" style="padding:10px 18px">Kirim ke WA</a>
-    `;
-}
-</script>
-
+</article>
 </body>
 </html>
