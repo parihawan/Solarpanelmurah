@@ -10,7 +10,7 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* biar padding gak bikin meleber */
+            box-sizing: border-box;
         }
 
         body{
@@ -21,9 +21,9 @@
         }
 
         header{
-            background: #0f766e;
+            background: linear-gradient(rgba(15,118,110,0.9), rgba(15,118,110,0.9)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200') center/cover no-repeat;
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
@@ -42,7 +42,7 @@
             display: inline-block;
             background: #f59e0b;
             color: #fff;
-            padding: 12px 24px;
+            padding: 14px 28px;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
@@ -55,7 +55,7 @@
         .container{
             max-width: 1100px;
             margin: auto;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
 
         .cards{
@@ -83,8 +83,33 @@
             margin-left: 20px;
         }
 
+        /* Kalkulator */
+        .calc-box{
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
+            margin-top: 30px;
+        }
+        .calc-box input{
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .calc-result{
+            margin-top: 20px;
+            padding: 16px;
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            border-radius: 6px;
+            display: none;
+        }
+
         footer{
-            width: 100%; /* ini kunci biar full di HP */
+            width: 100%;
             background: #0f172a;
             color: white;
             text-align: center;
@@ -106,13 +131,12 @@
             z-index: 999;
         }
 
-        /* Mobile responsive */
         @media (max-width: 600px){
             header{
-                padding: 40px 16px;
+                padding: 50px 16px;
             }
             header h1{
-                font-size: 32px; /* turunin biar gak kegedean di HP */
+                font-size: 32px;
             }
             header p{
                 font-size: 16px;
@@ -123,21 +147,19 @@
             .container{
                 padding: 30px 16px;
             }
-            .card{
+            .card, .calc-box{
                 padding: 18px;
             }
         }
     </style>
 
-    <!-- Schema SEO biar muncul rich snippet -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "SolarPanelMurah.id",
       "url": "https://solarpanelmurah.id",
-      "description": "Portal informasi panel surya di Indonesia",
-      "logo": "https://solarpanelmurah.id/logo.png"
+      "description": "Portal informasi panel surya di Indonesia"
     }
     </script>
 </head>
@@ -146,39 +168,46 @@
 
 <header>
     <h1>SolarPanelMurah.id</h1>
-    <p>
-        Portal informasi panel surya di Indonesia yang membahas harga,
-        cara kerja, estimasi biaya pemasangan, dan panduan memilih sistem
-        PLTS untuk rumah maupun bisnis.
-    </p>
-    <a class="btn" href="#artikel">Jelajahi Artikel</a>
+    <p>Portal informasi panel surya di Indonesia. Bahas harga, cara kerja, estimasi biaya, dan panduan PLTS rumah & bisnis.</p>
+    <a class="btn" href="#kalkulator">Hitung Estimasi Biaya</a>
 </header>
 
 <div class="container">
 
     <section>
         <h2>Mengapa Menggunakan Panel Surya?</h2>
-        <p>
-            Panel surya memanfaatkan energi matahari untuk menghasilkan listrik.
-            Teknologi ini dapat membantu mengurangi konsumsi listrik dari jaringan
-            konvensional dan menjadi salah satu pilihan energi terbarukan yang
-            semakin berkembang di Indonesia.
-        </p>
+        <p>Panel surya memanfaatkan energi matahari untuk menghasilkan listrik. Cocok untuk mengurangi tagihan PLN dan jadi solusi energi bersih yang makin berkembang di Indonesia.</p>
     </section>
 
     <section class="cards">
         <div class="card">
             <h3>💡 Edukasi Lengkap</h3>
-            <p>Pelajari dasar-dasar panel surya, inverter, baterai, hingga sistem PLTS secara mudah dipahami.</p>
+            <p>Pelajari dasar panel surya, inverter, baterai, hingga sistem PLTS dengan bahasa simpel.</p>
         </div>
         <div class="card">
             <h3>💰 Estimasi Biaya</h3>
-            <p>Temukan panduan menghitung kebutuhan dan estimasi biaya pemasangan panel surya untuk rumah.</p>
+            <p>Hitung kebutuhan daya & perkiraan biaya pemasangan sesuai pemakaian listrik rumahmu.</p>
         </div>
         <div class="card">
             <h3>🌱 Energi Berkelanjutan</h3>
-            <p>Kenali manfaat energi matahari sebagai salah satu solusi untuk mendukung energi ramah lingkungan.</p>
+            <p>Kurangi jejak karbon dan ikut dukung transisi ke energi terbarukan di Indonesia.</p>
         </div>
+    </section>
+
+    <section id="kalkulator">
+        <h2>Kalkulator Estimasi Biaya PLTS Rumah</h2>
+        <div class="calc-box">
+            <label>Berapa watt daya listrik rumah kamu?</label>
+            <input type="number" id="daya" placeholder="Contoh: 1300">
+
+            <label>Jam pemakaian per hari</label>
+            <input type="number" id="jam" placeholder="Contoh: 8">
+
+            <button class="btn" onclick="hitung()">Hitung Sekarang</button>
+
+            <div class="calc-result" id="hasil"></div>
+        </div>
+        <p style="font-size: 13px; color: #666; margin-top: 10px;">*Estimasi kasar. Harga real tergantung merek, instalasi, dan lokasi. Konsultasi gratis via WA untuk harga pasti.</p>
     </section>
 
     <section id="artikel">
@@ -195,12 +224,7 @@
 
     <section>
         <h2>Tentang SolarPanelMurah.id</h2>
-        <p>
-            Website ini dibuat sebagai sumber informasi mengenai teknologi
-            panel surya di Indonesia. Konten disusun untuk membantu pembaca
-            memahami konsep dasar, perencanaan, serta berbagai aspek yang
-            berkaitan dengan sistem tenaga surya.
-        </p>
+        <p>Website ini jadi sumber informasi panel surya di Indonesia. Tujuannya bantu kamu paham konsep dasar, perencanaan, dan aspek teknis sistem tenaga surya sebelum pasang.</p>
     </section>
 
 </div>
@@ -209,8 +233,35 @@
     © 2026 SolarPanelMurah.id - Informasi Panel Surya Indonesia
 </footer>
 
-<!-- CTA WhatsApp floating -->
-<a class="wa-btn" href="https://wa.me/62xxxxxxxxxx?text=Halo%20min,%20mau%20tanya%20panel%20surya" target="_blank">Konsultasi WA</a>
+<a class="wa-btn" href="https://wa.me/628986684639?text=Halo%20min,%20mau%20tanya%20panel%20surya" target="_blank">Konsultasi WA</a>
+
+<script>
+function hitung(){
+    let daya = document.getElementById('daya').value;
+    let jam = document.getElementById('jam').value;
+    let hasil = document.getElementById('hasil');
+
+    if(daya == '' || jam == ''){
+        alert('Isi daya dan jam pemakaian dulu ya');
+        return;
+    }
+
+    let kwhPerHari = (daya * jam) / 1000;
+    let kwhPerBulan = kwhPerHari * 30;
+    let wpDibutuhkan = Math.ceil(kwhPerBulan / 4); // asumsi 4 jam penyinaran matahari
+    let panel550wp = Math.ceil(wpDibutuhkan / 550);
+    let estimasiBiaya = wpDibutuhkan * 15000; // asumsi Rp15rb per WP
+
+    hasil.style.display = 'block';
+    hasil.innerHTML = `
+        <strong>Hasil Estimasi:</strong><br>
+        Kebutuhan: ${kwhPerBulan.toFixed(0)} kWh/bulan<br>
+        Panel dibutuhkan: ~${wpDibutuhkan} WP ≈ ${panel550wp} lembar 550WP<br>
+        Estimasi biaya: Rp ${estimasiBiaya.toLocaleString('id-ID')}<br>
+        <small>Belum termasuk inverter, baterai, instalasi</small>
+    `;
+}
+</script>
 
 </body>
 </html>
