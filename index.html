@@ -3,99 +3,504 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SolarPanelMurah.id | Informasi Panel Surya, Harga & Panduan Indonesia</title>
-    <meta name="description" content="Pelajari panel surya untuk rumah dan bisnis di Indonesia. Temukan panduan, estimasi biaya, tips memilih komponen, dan informasi energi surya terbaru.">
+
+    <meta name="description" content="Portal informasi panel surya di Indonesia. Pelajari harga, cara kerja, estimasi biaya, panduan PLTS rumah, dan tips memilih komponen energi surya.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://solarpanelmurah.id/">
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SolarPanelMurah.id">
+    <meta property="og:description" content="Portal informasi panel surya di Indonesia.">
+    <meta property="og:url" content="https://solarpanelmurah.id/">
+    <meta property="og:image" content="https://solarpanelmurah.id/images/cover.jpg">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html{
+            scroll-behavior:smooth;
         }
 
         body{
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f7f9;
-            color: #222;
-            line-height: 1.6;
-            padding-top: 70px;
+            font-family:Arial,Helvetica,sans-serif;
+            background:#f4f7f9;
+            color:#222;
+            line-height:1.7;
+            padding-top:70px;
         }
 
         nav{
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #0f172a;
-            padding: 16px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            background:#0f172a;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:16px 20px;
+            z-index:9999;
         }
 
-        nav .logo{
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            text-decoration: none;
+        .logo{
+            color:#fff;
+            text-decoration:none;
+            font-size:22px;
+            font-weight:bold;
         }
 
-        nav .menu{
-            display: flex;
-            gap: 24px;
+        .menu{
+            display:flex;
+            gap:24px;
         }
 
-        nav .menu a{
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.2s;
+        .menu a{
+            color:white;
+            text-decoration:none;
         }
 
-        nav .menu a:hover{
-            color: #f59e0b;
+        .menu a:hover{
+            color:#f59e0b;
         }
 
         .menu-toggle{
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
+            display:none;
+            flex-direction:column;
+            gap:5px;
+            cursor:pointer;
         }
 
         .menu-toggle span{
-            width: 25px;
-            height: 3px;
-            background: white;
-            border-radius: 2px;
+            width:26px;
+            height:3px;
+            background:white;
         }
 
         header{
-            background: linear-gradient(rgba(15,118,110,0.9), rgba(15,118,110,0.9)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200') center/cover no-repeat;
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
+            background:
+                linear-gradient(rgba(15,118,110,.88),rgba(15,118,110,.88)),
+                url("images/hero-panel-surya.webp") center/cover no-repeat;
+            color:white;
+            text-align:center;
+            padding:90px 20px;
         }
 
         header h1{
-            font-size: 42px;
-            margin-bottom: 16px;
+            font-size:44px;
+            margin-bottom:18px;
         }
 
         header p{
-            max-width: 700px;
-            margin: 0 auto 24px;
-            font-size: 18px;
+            max-width:760px;
+            margin:auto;
+            margin-bottom:28px;
+            font-size:18px;
         }
 
         .btn{
-            display: inline-block;
-            background: #f59e0b;
-            color: #fff;
-            padding: 14px 28px;
-            text-decoration: none;
-            border-radius: 8px;
+            display:inline-block;
+            background:#f59e0b;
+            color:white;
+            text-decoration:none;
+            padding:14px 28px;
+            border-radius:8px;
+            font-weight:bold;
+            border:none;
+            cursor:pointer;
+        }
+
+        .btn:hover{
+            background:#d97706;
+        }
+
+        main{
+            max-width:1100px;
+            margin:auto;
+            padding:50px 20px;
+        }
+
+        section{
+            margin-bottom:50px;
+        }
+
+        h2{
+            margin-bottom:18px;
+            color:#0f172a;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:white;
+            padding:24px;
+            border-radius:12px;
+            box-shadow:0 2px 8px rgba(0,0,0,.08);
+        }
+
+        .calc-box{
+            background:white;
+            padding:24px;
+            border-radius:12px;
+            box-shadow:0 2px 8px rgba(0,0,0,.08);
+        }
+
+        input{
+            width:100%;
+            padding:12px;
+            margin-top:8px;
+            margin-bottom:16px;
+            border-radius:6px;
+            border:1px solid #ccc;
+        }
+
+        .result{
+            display:none;
+            margin-top:20px;
+            padding:16px;
+            background:#ecfdf5;
+            border-left:4px solid #10b981;
+            border-radius:6px;
+        }
+
+        ul{
+            padding-left:20px;
+        }
+
+        li{
+            margin-bottom:10px;
+        }
+
+        li a{
+            text-decoration:none;
+            color:#0f766e;
+        }
+
+        footer{
+            background:#0f172a;
+            color:white;
+            text-align:center;
+            padding:30px 20px;
+        }
+
+        .wa-btn{
+            position:fixed;
+            right:20px;
+            bottom:20px;
+            background:#25D366;
+            color:white;
+            text-decoration:none;
+            padding:14px 18px;
+            border-radius:50px;
+            font-weight:bold;
+        }
+
+        @media(max-width:768px){
+
+            .menu{
+                display:none;
+                position:absolute;
+                top:60px;
+                right:0;
+                width:220px;
+                flex-direction:column;
+                background:#0f172a;
+                padding:20px;
+            }
+
+            .menu.active{
+                display:flex;
+            }
+
+            .menu-toggle{
+                display:flex;
+            }
+
+            header h1{
+                font-size:32px;
+            }
+
+            header p{
+                font-size:16px;
+            }
+
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Organization",
+      "name":"SolarPanelMurah.id",
+      "url":"https://solarpanelmurah.id",
+      "logo":"https://solarpanelmurah.id/images/logo.png"
+    }
+    </script>
+
+</head>
+
+<body>
+
+<nav>
+
+    <a class="logo" href="/">
+        SolarPanelMurah.id
+    </a>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="menu" id="menu">
+
+        <a href="/">Beranda</a>
+
+        <a href="#artikel">
+            Artikel
+        </a>
+
+        <a href="#kalkulator">
+            Kalkulator
+        </a>
+
+        <a href="#tentang">
+            Tentang
+        </a>
+
+        <a href="https://wa.me/628986684639" target="_blank" rel="noopener noreferrer">
+            Kontak
+        </a>
+
+    </div>
+
+</nav>
+
+<header>
+
+    <h1>
+        SolarPanelMurah.id
+    </h1>
+
+    <p>
+        Portal informasi panel surya di Indonesia yang membahas harga,
+        cara kerja, perencanaan PLTS rumah, serta panduan energi surya
+        untuk masyarakat dan pelaku usaha.
+    </p>
+
+    <a class="btn" href="#kalkulator">
+        Hitung Estimasi
+    </a>
+
+</header>
+
+<main>
+
+<section>
+
+<h2>
+Mengapa Menggunakan Panel Surya?
+</h2>
+
+<p>
+Panel surya mengubah energi matahari menjadi listrik yang dapat dimanfaatkan
+untuk berbagai kebutuhan. Dengan perencanaan yang tepat, teknologi ini dapat
+membantu mengurangi konsumsi listrik dari jaringan konvensional sekaligus
+mendukung penggunaan energi yang lebih berkelanjutan.
+</p>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>💡 Edukasi Lengkap</h3>
+<p>Belajar tentang panel surya, inverter, baterai, dan sistem PLTS.</p>
+</div>
+
+<div class="card">
+<h3>💰 Estimasi Kebutuhan</h3>
+<p>Hitung kebutuhan daya dan perkiraan kapasitas panel surya.</p>
+</div>
+
+<div class="card">
+<h3>🌱 Energi Berkelanjutan</h3>
+<p>Pahami manfaat energi matahari untuk rumah dan bisnis.</p>
+</div>
+
+</section>
+
+<section id="kalkulator">
+
+<h2>Kalkulator Estimasi Sederhana</h2>
+
+<div class="calc-box">
+
+<label>Daya listrik rumah (VA/Watt)</label>
+<input id="daya" type="number">
+
+<label>Rata-rata jam penggunaan per hari</label>
+<input id="jam" type="number">
+
+<button class="btn" onclick="hitung()">
+Hitung
+</button>
+
+<div class="result" id="hasil"></div>
+
+</div>
+
+<p style="margin-top:10px;font-size:13px;color:#666;">
+Hasil di atas merupakan simulasi sederhana dan bukan penawaran resmi.
+</p>
+
+</section>
+
+<section id="artikel">
+
+<h2>Artikel Pilihan</h2>
+
+<ul>
+
+<li><a href="pengertian-panel-surya.html">Pengertian Panel Surya</a></li>
+
+<li><a href="harga-panel-surya.html">Harga Panel Surya Terbaru</a></li>
+
+<li><a href="cara-menghitung-kebutuhan-panel-surya.html">
+Cara Menghitung Kebutuhan Panel Surya
+</a></li>
+
+<li><a href="plts-on-grid-vs-off-grid.html">
+PLTS On Grid vs Off Grid
+</a></li>
+
+<li><a href="tips-memilih-inverter.html">
+Tips Memilih Inverter
+</a></li>
+
+<li><a href="perawatan-panel-surya.html">
+Perawatan Panel Surya
+</a></li>
+
+</ul>
+
+</section>
+
+<section id="tentang">
+
+<h2>Tentang Kami</h2>
+
+<p>
+SolarPanelMurah.id merupakan portal informasi yang bertujuan membantu
+masyarakat memahami teknologi panel surya melalui artikel edukatif,
+panduan praktis, dan simulasi sederhana.
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>
+© 2026 SolarPanelMurah.id
+</p>
+
+<p>
+Informasi dan edukasi seputar panel surya di Indonesia.
+</p>
+
+</footer>
+
+<a class="wa-btn"
+href="https://wa.me/628986684639"
+target="_blank"
+rel="noopener noreferrer">
+WA
+</a>
+
+<script>
+
+function toggleMenu(){
+
+    document
+    .getElementById("menu")
+    .classList
+    .toggle("active");
+
+}
+
+function hitung(){
+
+    const daya =
+    Number(document.getElementById("daya").value);
+
+    const jam =
+    Number(document.getElementById("jam").value);
+
+    if(!daya || !jam){
+
+        alert("Silakan isi kedua nilai terlebih dahulu.");
+        return;
+
+    }
+
+    const kwhBulanan =
+    ((daya * jam) / 1000) * 30;
+
+    const wp =
+    Math.ceil(kwhBulanan / 4);
+
+    const panel =
+    Math.ceil(wp / 550);
+
+    const hasil =
+    document.getElementById("hasil");
+
+    hasil.style.display="block";
+
+    hasil.innerHTML=
+    `
+    <strong>Estimasi Sederhana</strong><br><br>
+
+    Konsumsi energi:
+    ${kwhBulanan.toFixed(1)} kWh/bulan
+
+    <br><br>
+
+    Perkiraan kebutuhan:
+    ± ${wp} WP
+
+    <br><br>
+
+    Jika memakai panel 550 WP,
+    diperlukan sekitar <strong>${panel} panel</strong>.
+
+    <br><br>
+
+    Gunakan hasil ini sebagai referensi awal. Perencanaan nyata perlu mempertimbangkan lokasi, orientasi atap, efisiensi sistem, dan profil beban listrik.
+    `;
+}
+
+</script>
+
+</body>
+</html>            border-radius: 8px;
             font-weight: bold;
             transition: 0.2s;
         }
